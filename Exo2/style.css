@@ -1,0 +1,35 @@
+.item_pizza, .item_fruit {
+    display: block;
+    margin: 5px 10px;
+}
+
+p {
+    font-weight: bold;
+
+}
+
+input[type="submit"]{
+    background-color: #5027F5;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 4px;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #4321D1;
+}
+
+
+fieldset {
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+
+legend {
+    font-weight: bold;
+    font-size: 20px;
+    color: #317ac1;
+}
