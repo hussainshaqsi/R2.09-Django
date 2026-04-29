@@ -2,11 +2,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    {% load static %}
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'myfirstapp/style.css' %}">
+
+    {% if nom != "" %}
+    <title>Bonjour {{nom}}, {{prenom}}</title>
+    {% else %}
+    <title>Bonjour Anonyme</title>
+    {% endif %}
+
 </head>
 <body>
-       <h1>Bonjour {{nom}}, {{prenom}}</h1>
+    {% if nom != "" %}
+    <h1>Bonjour {{nom}}, {{prenom}}</h1>
+    {% else %}
+    <h1> Hello world </h1>
+    {% endif %}
 </body>
 </html>
