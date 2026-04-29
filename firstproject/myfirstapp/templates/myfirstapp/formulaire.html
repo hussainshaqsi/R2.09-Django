@@ -7,16 +7,12 @@
 </head>
 <body>
     <h1>Mon Incroyable Formulaire</h1>
-    <form action="#" method="post">
+    <form action="/myfirstapp/bonjour" method="GET">
+        {% csrf_token %}
         <div class="champ">
+
             <label for="text">Nom : </label>
-            <input type="text" name="texte" id="text">
-
-            <label for="mail">Email : </label>
-            <input type="email" name="mail" id="mail">
-
-            <label for="msg">Message : </label>
-            <textarea name="msg" id="msg"></textarea>
+            <input type="text" name="nom" id="text">
 
             <input type="submit" value="Envoyer">
         </div>
