@@ -1,4 +1,4 @@
-/* Importation d'une police moderne */
+
 @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
 
 :root {
@@ -24,7 +24,7 @@ body {
     padding: 20px;
 }
 
-/* Conteneur principal pour centrer le contenu */
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -40,7 +40,7 @@ h1 {
     text-align: center;
 }
 
-/* Styles des formulaires */
+
 form {
     display: flex;
     flex-direction: column;
@@ -68,7 +68,6 @@ select {
     font-size: 1rem;
 }
 
-/* Boutons */
 input[type="submit"], button {
     background-color: var(--primary-color);
     color: var(--white);
@@ -85,7 +84,7 @@ input[type="submit"]:hover, button:hover {
     background-color: var(--primary-hover);
 }
 
-/* Liens de navigation */
+
 a {
     color: var(--primary-color);
     text-decoration: none;
@@ -96,7 +95,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Anticipation : Barre de navigation simple */
+
 nav {
     background: var(--primary-color);
     padding: 10px;
@@ -108,4 +107,16 @@ nav {
 nav a {
     color: white;
     margin: 0 15px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
 }

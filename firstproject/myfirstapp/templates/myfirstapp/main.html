@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myfirstapp/style.css' %}">
+    <title>{% block title %}My Site{% endblock %}</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Django Site</h1>
+    </header>
+
+    <nav>
+        {% block sidebar %}
+        <ul>
+            <li><a href="/myfirstapp/index/">Home</a></li>
+            <li><a href="/myfirstapp/formulaire/">Form</a></li>
+        </ul>
+        {% endblock %}
+    </nav>
+
+    <main>
+        {% block content %}
+        <h1>Default content</h1>
+        {% endblock %}
+    </main>
+
+</body>
+</html>

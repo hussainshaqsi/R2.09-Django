@@ -1,22 +1,12 @@
+{% extends "myfirstapp/main.html" %}
 
+{% block title %}Mon Formulaire{% endblock %}
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    {% load static %}
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="{%static 'myfirstapp/style.css' %}">
-
-   <title>Mon Formulaire</title>
-</head>
-<body>
+{% block content %}
     <h1>Mon Incroyable Formulaire</h1>
     <form action="/myfirstapp/bonjour" method="GET">
         {% csrf_token %}
         <div class="champ">
-
             <label for="nom">Nom : </label>
             <input type="text" name="nom" id="nom">
 
@@ -26,5 +16,4 @@
             <input type="submit" value="Envoyer">
         </div>
     </form>
-</body>
-</html>
+{% endblock %}
