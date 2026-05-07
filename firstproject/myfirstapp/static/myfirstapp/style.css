@@ -80,6 +80,7 @@ input[type="submit"], button {
     transition: background 0.3s ease;
 }
 
+
 input[type="submit"]:hover, button:hover {
     background-color: var(--primary-hover);
 }
