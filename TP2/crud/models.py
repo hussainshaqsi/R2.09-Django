@@ -8,4 +8,4 @@ class Livre(models.Model):
     resume = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return f"{self.titre} écrit par {self.auteur} édité le {self.date_parution}"l
+        return f"{self.titre} écrit par {self.auteur} édité le {self.date_parution}"
