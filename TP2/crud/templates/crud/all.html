@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Bibliothèque</title></head>
+<body>
+    <h1>Liste des livres</h1>
+    <a href="/bibliotheque/ajout/">➕ Ajouter un nouveau livre</a>
+    <ul>
+    {% for livre in livres %}
+        <li>
+            <a href="/bibliotheque/affiche/{{ livre.id }}/">{{ livre.titre }}</a>
+            par {{ livre.auteur }}
+        </li>
+    {% empty %}
+        <li>Aucun livre dans la bibliothèque.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

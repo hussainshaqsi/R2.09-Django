@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Détail d'un Livre</title></head>
+<body>
+    <h1>{{ Livre.titre }}</h1>
+    <p><strong>Auteur :</strong> {{ Livre.auteur }}</p>
+    <p><strong>Date de parution :</strong> {{ Livre.date_parution }}</p>
+    <p><strong>Nombre de pages :</strong> {{ Livre.nombre_pages }}</p>
+    <p><strong>Résumé :</strong> {{ Livre.resume }}</p>
+
+    {% if Livre.nombre_pages > 500 %}
+        <p><em>(Gros livre)</em></p>
+    {% else %}
+        <p><em>(Livre moyen)</em></p>
+    {% endif %}
+
+    <a href="/bibliotheque/update/{{ Livre.id }}/">Modifier</a> |
+    <a href="/bibliotheque/delete/{{ Livre.id }}/">Supprimer</a> |
+    <a href="/bibliotheque/">Retour à la liste</a>
+</body>
+</html>

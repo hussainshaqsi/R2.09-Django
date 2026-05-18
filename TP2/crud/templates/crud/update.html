@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Modifier un Livre</title></head>
+<body>
+    <h1>Modifier le livre</h1>
+    <form method="post" action="/bibliotheque/traitementupdate/{{ id }}/">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Mettre à jour">
+    </form>
+    <a href="/bibliotheque/">Annuler</a>
+</body>
+</html>
