@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><body>
+<h1>Categories</h1>
+<a href="/bibliotheque/categories/ajout/">+ Add category</a>
+<ul>
+{% for c in categories %}
+  <li>
+    <a href="/bibliotheque/categories/{{ c.id }}/">{{ c.nom }}</a>
+    | <a href="/bibliotheque/categories/{{ c.id }}/update/">edit</a>
+    | <a href="/bibliotheque/categories/{{ c.id }}/delete/">delete</a>
+  </li>
+{% endfor %}
+</ul>
+<a href="/bibliotheque/">home</a>
+</body></html>

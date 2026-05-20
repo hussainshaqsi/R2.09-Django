@@ -1,0 +1,9 @@
+<!DOCTYPE html><html><body>
+<h1>{{ livre.titre }}</h1>
+<p>Author: {{ livre.auteur }}</p>
+<p>Category: <a href="/bibliotheque/categories/{{ livre.categorie.id }}/">{{ livre.categorie.nom }}</a></p>
+<p>Release date: {{ livre.date_depart }}</p>
+<p>Pages: {{ livre.nb_page }}</p>
+<p>Summary: {{ livre.resume }}</p>
+<a href="/bibliotheque/livres/">back</a>
+</body></html>

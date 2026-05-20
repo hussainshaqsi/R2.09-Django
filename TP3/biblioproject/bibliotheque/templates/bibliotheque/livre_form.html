@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><body>
+<form method="post" action="{% if id %}/bibliotheque/livres/{{ id }}/update/{% else %}/bibliotheque/livres/ajout/{% endif %}">
+  {% csrf_token %}
+  {{ form.as_ul }}
+  <input type="submit" value="submit">
+</form>
+<a href="/bibliotheque/livres/">cancel</a>
+</body></html>
