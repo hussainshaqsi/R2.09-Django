@@ -1,4 +1,5 @@
-<!DOCTYPE html><html><body>
+{% extends "bibliotheque/skelete.html" %}
+{% block content %}
 <h1>Categories</h1>
 <a href="/bibliotheque/categories/ajout/">+ Add category</a>
 <ul>
@@ -11,4 +12,4 @@
 {% endfor %}
 </ul>
 <a href="/bibliotheque/">home</a>
-</body></html>
+{% endblock %}

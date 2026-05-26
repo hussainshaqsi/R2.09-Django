@@ -1,4 +1,5 @@
-<!DOCTYPE html><html><body>
+{% extends "bibliotheque/skelete.html" %}
+{% block content %}
 <h1>{{ livre.titre }}</h1>
 <p>Author: {{ livre.auteur }}</p>
 <p>Category: <a href="/bibliotheque/categories/{{ livre.categorie.id }}/">{{ livre.categorie.nom }}</a></p>
@@ -6,4 +7,4 @@
 <p>Pages: {{ livre.nb_page }}</p>
 <p>Summary: {{ livre.resume }}</p>
 <a href="/bibliotheque/livres/">back</a>
-</body></html>
+{% endblock %}

@@ -1,4 +1,5 @@
-<!DOCTYPE html><html><body>
+{% extends "bibliotheque/skelete.html" %}
+{% block content %}
 <h1>{{ categorie.nom }}</h1>
 <p>{{ categorie.descriptif }}</p>
 
@@ -12,4 +13,4 @@
 </ul>
 
 <a href="/bibliotheque/categories/">back</a>
-</body></html>
+{% endblock %}

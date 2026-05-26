@@ -1,9 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from .forms import CategorieForm, LivreForm
 from . import models
 # Create your views here.
 # ===== CATEGORIE CRUD =====
+
+def skelete(request):
+    return render(request,"bibliotheque/home.html") #views needs to call the infant and not the child
+
 
 def categorie_index(request):
     categories = models.Categorie.objects.all()
