@@ -9,4 +9,4 @@ class CategorieForm(ModelForm):
 class LivreForm(ModelForm):
     class Meta:
         model = models.Livre
-        fields = ('titre', 'date_depart', 'nb_page', 'resume', 'auteur', 'categorie')
+        fields = ('titre', 'date_depart', 'nb_page', 'resume', 'auteur', 'categorie', 'Image')

@@ -52,7 +52,7 @@ def livre_index(request):
 
 def livre_ajout(request):
     if request.method == "POST":
-        form = LivreForm(request.POST)
+        form = LivreForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/bibliotheque/livres/")
@@ -66,7 +66,7 @@ def livre_read(request, id):
 def livre_update(request, id):
     livre = get_object_or_404(models.Livre, pk=id)
     if request.method == "POST":
-        form = LivreForm(request.POST)
+        form = LivreForm(request.POST,request.FILES)
         if form.is_valid():
             obj = form.save(commit=False)
             obj.id = id

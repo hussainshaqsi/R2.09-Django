@@ -18,6 +18,7 @@ class Livre(models.Model):
         on_delete=models.CASCADE,
         related_name='livres'
     )
+    Image = models.ImageField(upload_to='images/',blank=True,null=True)
 
     def __str__(self):
         return f"{self.titre} ({self.categorie})"

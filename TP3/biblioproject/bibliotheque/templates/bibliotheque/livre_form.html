@@ -1,6 +1,6 @@
 {% extends "bibliotheque/skelete.html" %}
 {% block content %}
-<form method="post" action="{% if id %}/bibliotheque/livres/{{ id }}/update/{% else %}/bibliotheque/livres/ajout/{% endif %}">
+<form method="post" enctype="multipart/form-data" action="{% if id %}/bibliotheque/livres/{{ id }}/update/{% else %}/bibliotheque/livres/ajout/{% endif %}">
   {% csrf_token %}
   {{ form.as_ul }}
   <input type="submit" value="submit">
